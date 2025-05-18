@@ -15,9 +15,26 @@ To write a Python program to evaluate a **Taylor Series** using **recursion**, w
 6. **Stop**
 
 ## 💻 PROGRAM:
+```
+def series(x, n):
+    if n == 0:
+        return 1
+    return (x**n) / factorial(n) + series(x, n - 1)
 
-ADD CODE HERE
+def factorial(k):
+    if k == 0:
+        return 1
+    return k * factorial(k - 1)
 
+x = float(input("Enter the value of x: "))
+n = int(input("Enter the number of terms (n): "))
+
+result = series(x, n)
+print("Result of the Taylor series:", result)
+
+```
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/ba33793e-369b-42d0-8f39-ed8b1f94f7e0)
 
 ## RESULT
+Therefore the given Python program has been executed successfully and the output has been verified.
